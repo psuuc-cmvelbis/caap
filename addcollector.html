@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-	<title>ADMIN</title>
+	<title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- FontAwesome JS-->
@@ -108,7 +110,7 @@
 
 						<li class="nav-item has-submenu">
 							<a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse"
-								data-bs-target="#submenu-1" aria-expanded="true" aria-controls="submenu-1">
+								data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
 								<span class="nav-icon">
 									<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files"
@@ -168,7 +170,7 @@
 							</div>
 						</li><!--//nav-item-->
 						<li class="nav-item has-submenu"></li>
-							<a class="nav-link submenu-toggle active" href="#" data-bs-toggle="collapse"
+							<a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse"
 								data-bs-target="#submenu-3" aria-expanded="false" aria-controls="submenu-3">
 								<span class="nav-icon">
 									<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -190,15 +192,15 @@
 								</span><!--//submenu-arrow-->
 								
 							</a><!--//nav-link-->
-							<div id="submenu-3" class="collapse submenu submenu-3 show" data-bs-parent="#menu-accordion">
+							<div id="submenu-3" class="collapse submenu submenu-3" data-bs-parent="#menu-accordion">
 								<ul class="submenu-list list-unstyled">
-									<li class="submenu-item"><a class="submenu-link " href="useraccount.html">Account</a></li>
-									<li class="submenu-item"><a class="submenu-link active" href="userreports.html">Reports</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="useraccount.html">Account</a></li>
+									<li class="submenu-item"><a class="submenu-link" href="userreports.html">Reports</a></li>
 								</ul>
 							</div>
 						</li><!--//nav-item-->
 						<li class="nav-item has-submenu"></li>
-							<a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse"
+							<a class="nav-link submenu-toggle active" href="#" data-bs-toggle="collapse"
 								data-bs-target="#submenu-4" aria-expanded="false" aria-controls="submenu-4">
 								<span class="nav-icon">
 									<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -220,9 +222,9 @@
 								</span><!--//submenu-arrow-->
 								
 							</a><!--//nav-link-->
-							<div id="submenu-4" class="collapse submenu submenu-4" data-bs-parent="#menu-accordion">
+							<div id="submenu-4" class="collapse submenu submenu-4 show" data-bs-parent="#menu-accordion">
 								<ul class="submenu-list list-unstyled">
-									<li class="submenu-item"><a class="submenu-link" href="addcollector.html">Account</a></li>
+									<li class="submenu-item"><a class="submenu-link active" href="addcollector.html">Account</a></li>
 									<li class="submenu-item"><a class="submenu-link" href="collectorschedule.html">Schedule</a></li>
 								</ul>
 							</div>
@@ -232,60 +234,109 @@
 			</div><!--//sidepanel-inner-->
 		</div><!--//app-sidepanel-->
 	</header><!--//app-header-->
-
 	<div class="app-wrapper">
 		<div class="app-content pt-3 p-md-3 p-lg-4">
 			<div class="container-xl">
 				<!-- Page Title -->
 				<div class="row g-3 mb-4 align-items-center justify-content-between">
 					<div class="col-auto">
-						<h1 class="app-page-title mb-0">User Reports</h1>
+						<h1 class="app-page-title mb-0">Collector Management</h1>
 					</div>
 				</div>
 	
-				<!-- User Reports Section -->
+				<!-- Table of Existing Collectors -->
 				<div class="row">
 					<div class="col-12">
-						<div class="card shadow-sm mb-4">
-							<div class="card-body">
-								<!-- Dummy Report 1 -->
-								<h5 class="card-title mb-2">Juan Dela Cruz, Urdaneta</h5>
-								<p class="text-muted mb-1"><strong>Collection Point:</strong> CP1, Anonas Urdaneta</p>
-								<p class="card-text"><em>"Puno na ang basurahan at nangangamoy na ang paligid."</em></p>
-							</div>
-						</div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Schedule</th>
+									<th>Phone Number</th>
+									<th>Email</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Dummy Data for Collectors -->
+								<tr>
+									<td>Juan Collector</td>
+									<td>Monday, Wednesday</td>
+									<td>+63 912 345 6789</td>
+									<td>juan.collector@example.com</td>
+									<td>
+										<button class="btn btn-sm btn-success">Edit</button>
+										<button class="btn btn-sm btn-danger">Delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>Maria Collector</td>
+									<td>Tuesday, Thursday</td>
+									<td>+63 923 456 7890</td>
+									<td>maria.collector@example.com</td>
+									<td>
+										<button class="btn btn-sm btn-success">Edit</button>
+										<button class="btn btn-sm btn-danger">Delete</button>
+									</td>
+								</tr>
+								<tr>
+									<td>Pedro Collector</td>
+									<td>Friday, Saturday</td>
+									<td>+63 934 567 8901</td>
+									<td>pedro.collector@example.com</td>
+									<td>
+										<button class="btn btn-sm btn-success">Edit</button>
+										<button class="btn btn-sm btn-danger">Delete</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 	
-						<div class="card shadow-sm mb-4">
-							<div class="card-body">
-								<!-- Dummy Report 2 -->
-								<h5 class="card-title mb-2">Maria Santos, Urdaneta</h5>
-								<p class="text-muted mb-1"><strong>Collection Point:</strong> CP2, San Vicente Urdaneta</p>
-								<p class="card-text"><em>"Maayos ang collection point pero kailangan na palitan ang signage dahil hirap na itong mabasa."</em></p>
+				<!-- Add New Collector Section -->
+				<div class="row mt-4">
+					<div class="col-12">
+						<h2 class="mb-3">Add New Collector</h2>
+						<form id="add-collector-form">
+							<div class="mb-3">
+								<label for="name" class="form-label">Collector Name</label>
+								<input type="text" class="form-control" id="name" name="name" placeholder="Enter collector's name" required>
 							</div>
-						</div>
 	
-						<div class="card shadow-sm mb-4">
-							<div class="card-body">
-								<!-- Dummy Report 3 -->
-								<h5 class="card-title mb-2">Pedro Gonzalez, Urdaneta</h5>
-								<p class="text-muted mb-1"><strong>Collection Point:</strong> CP2, San Vicente Urdaneta</p>
-								<p class="card-text"><em>"Laging puno ang basurahan bago magtanghali. Kailangan ng dagdag na mga basurahan o mas madalas na pagkuha ng basura."</em></p>
+							<div class="mb-3">
+								<label for="schedule" class="form-label">Schedule</label>
+								<select class="form-select" id="schedule" name="schedule" required>
+									<option value="" disabled selected>Select Schedule</option>
+									<option value="Monday, Wednesday">Monday, Wednesday</option>
+									<option value="Tuesday, Thursday">Tuesday, Thursday</option>
+									<option value="Friday, Saturday">Friday, Saturday</option>
+								</select>
 							</div>
-						</div>
 	
-						<div class="card shadow-sm mb-4">
-							<div class="card-body">
-								<!-- Dummy Report 4 -->
-								<h5 class="card-title mb-2">Ana Reyes, Urdaneta</h5>
-								<p class="text-muted mb-1"><strong>Collection Point:</strong> CP1, Anonas Urdaneta</p>
-								<p class="card-text"><em>"May mga basag na bote sa paligid na maaaring makasakit."</em></p>
+							<div class="mb-3">
+								<label for="phone" class="form-label">Phone Number</label>
+								<input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone number" required>
 							</div>
-						</div>
+	
+							<div class="mb-3">
+								<label for="email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+							</div>
+	
+							<div class="mb-3">
+								<label for="password" class="form-label">Password</label>
+								<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+							</div>
+	
+							<button type="submit" class="btn btn-primary">Add Collector</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div><!--//app-content-->
 	</div><!--//app-wrapper-->
+	
 	
 	
 	
